@@ -1,7 +1,7 @@
 const mysql = require('../mysql.js')
 
-exports.extractFacts = () => {
-  let sql = ""
+exports.extractFacts = (next) => {
+  let sql = "SELECT * FROM account"
 
   mysql.dbSource.query(sql, (err, result) => {
     if (err) throw err
@@ -9,7 +9,7 @@ exports.extractFacts = () => {
   })
 }
 
-exports.loadFacts = () => {
+exports.loadFacts = (next) => {
   let sql = ""
 
   mysql.dbDest.query(sql, (err, result) => {
