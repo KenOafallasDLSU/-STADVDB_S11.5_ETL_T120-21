@@ -1,0 +1,102 @@
+<div class="container" id='home'>
+  
+  <!-- Dataset Description -->
+  <div class="row justify-content-center" id="database-description-div">
+    <div class="col-sm-8">
+      <br><br>
+      <h5>Dataset Description</h5>
+      <p>The dataset used for this application is called <b><i>The Berka Dataset</i></b>.
+      This dataset, which was created by Petr Berka and Marta Sochorova, is a collection
+      of information from a Czech bank in 1999.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="../img/dataset-img.png" width="350px">
+    </div>
+  </div>
+
+  <hr>
+  <!-- Query 1.1 -->
+  <br><br>
+  <img src="../img/query1-img.png" height="200px" class="mx-auto d-block">
+  <br>
+
+  <div class="row" id="query11-div">
+    <div class="col">
+      <a class="query-name" href="/">ETL Facts</a>
+      <p>The purpose of this query is to check the “balance” or the movement of money of a 
+        single account by subtracting the sum of all the debit labeled transactions 
+        from the sum of all the credit labeled transactions. Since the start date and 
+        end date of the transactions is also available, whoever is querying also has the 
+        ability to check transactions between two dates such as a certain month or a week.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+  <!-- Query 1.2 -->
+  <br><br>
+  <div class="row" id="query12-div">
+    <div class="col">
+      <a class="query-name" href="/">ETL Accounts</a>
+      <p>The purpose of this query is to show the general information about all the transactions 
+        of a certain characterization (such as credited interest or insurance payment) per 
+        account, like the total amount per account or number of transactions per account. 
+        The transactions queried can also be between two specified dates so the user can 
+        check transactions for a certain month or week.</p>
+    </div>
+  </div>
+
+  <hr>
+  <!-- Query 2.1 -->
+  <br><br>
+  <img src="../img/query2-img.png" height="200px" class="mx-auto d-block">
+  <br>
+
+  <div class="row" id="Count of Credit Card Holders of a Type and Disposition">
+    <div class="col">
+      <a class="query-name" href="/">ETL Time</a>
+      <p>The purpose of this query is to get the total number of card type per disposition 
+        type, that is, the query makes use of the Card and Disposition tables to obtain 
+        the number of clients who own the following type of cards offered by the Czech 
+        bank: Gold, classic, and junior.  Each client, or disposition type, is distinguished 
+        by two categories: If they are an owner or a disponent, or someone who uses or is 
+        in charge of the card type reflected in the table but does not own it.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+  <!-- Query 2.2 -->
+  <br><br>
+  <div class="row" id="Status of Loans and Remaining Balance to be Paid by a Customer">
+    <div class="col">
+      <a class="query-name" href="/">ETL Recipient</a>
+      <p>The purpose of this query is to show if the selected account has any loans. 
+        If the account has a loan in record, the details will be displayed. 
+        The loan ID, the date the loan was taken, and its current status will be 
+        displayed. If the loan is not yet fully paid the remaining balance will be 
+        shown by subtracting the transactions made to the loan taken, otherwise it 
+        will display that the loan is finished.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+  <!-- Query 2.2 -->
+  <br><br>
+  <div class="row" id="Status of Loans and Remaining Balance to be Paid by a Customer">
+    <div class="col">
+      <a class="query-name" href="/">ETL Type</a>
+      <p>The purpose of this query is to show if the selected account has any loans. 
+        If the account has a loan in record, the details will be displayed. 
+        The loan ID, the date the loan was taken, and its current status will be 
+        displayed. If the loan is not yet fully paid the remaining balance will be 
+        shown by subtracting the transactions made to the loan taken, otherwise it 
+        will display that the loan is finished.
+      </p>
+    </div>
+  </div>
+
+  <br><br><br>
+  <br><br><br>
+</div>
