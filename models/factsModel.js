@@ -1,19 +1,15 @@
 const mysql = require('../mysql.js')
 
-exports.extractFacts = (next) => {
+exports.extractFacts = async () => {
   let sql = "SELECT * FROM account"
 
-  mysql.dbSource.query(sql, (err, result) => {
-    if (err) throw err
-    next(result)
-  })
+  let result = await mysql.dbSource.promise().query(sql)
+  return result
 }
 
-exports.loadFacts = (next) => {
+exports.loadFacts = async () => {
   let sql = ""
 
-  mysql.dbDest.query(sql, (err, result) => {
-    if (err) throw err
-    next(result)
-  })
+  let result = await mysql.dbDest.promise().query(sql)
+  return result
 }

@@ -1,8 +1,6 @@
 const factsModel = require('../models/factsModel.js')
 
-exports.transformFacts = (req, res) => {
-  factsModel.extractFacts((result) => {
-    console.log(result)
-    res.send(result)
-  })
+exports.transformFacts = async (req, res) => {
+  let result = await factsModel.extractFacts()
+  res.send(result)
 }
