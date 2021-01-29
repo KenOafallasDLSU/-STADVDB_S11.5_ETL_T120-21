@@ -1,6 +1,6 @@
 const mysql = require('../mysql.js')
 
-exports.extractAccount = (next) => {
+exports.extractAccount = async () => {
   let sql = 
   ` INSERT INTO financialwh.account
     SELECT DISTINCT a.account_id AS accountid, a.frequency, d1.A2 AS accountDistrict, YEAR(a.date) AS createdYear,
@@ -24,17 +24,7 @@ exports.extractAccount = (next) => {
     );
   `
 
-  mysql.dbSource.query(sql, (err, result) => {
-    if (err) throw err
-    next(result)
-  })
-}
-
-exports.loadAccount = (next) => {
-  let sql = ""
-
-  mysql.dbDest.query(sql, (err, result) => {
-    if (err) throw err
-    next(result)
-  })
+  let result = await mysql.dbSource.promise().query(sql)
+  console.log(result)
+  return result
 }

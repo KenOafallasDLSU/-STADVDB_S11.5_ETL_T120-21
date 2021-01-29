@@ -1,16 +1,14 @@
 $(document).ready(() => {
   console.log("Michiko Gomi")
-
-  $('#facts-button').on('click', () => {
-    $.post('/facts', (data, status) => {
-      console.log("Facts: " + status)
-    })
+  
+  $('#facts-button').on('click', async () => {
+    let data = await $.post('/facts')
+    console.log(data)
   })
 
-  $('#account-button').on('click', () => {
-    $.post('/account', (data, status) => {
-      console.log("Account: " + status)
-    })
+  $('#account-button').on('click', async () => {
+    let status = await $.post('/account')
+    console.log(status)
   })
 
   $('#type-button').on('click', () => {
