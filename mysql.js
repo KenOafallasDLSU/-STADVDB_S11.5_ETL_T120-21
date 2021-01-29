@@ -17,5 +17,5 @@ exports.dbDest = mysql.createConnection({
   port: "3307",
   user: "admin",
   password: "p@ssword",
-  database: "financialWarehouse"
+  database: "financialwh"
 })
