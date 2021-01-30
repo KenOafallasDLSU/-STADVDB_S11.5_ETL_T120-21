@@ -1,12 +1,14 @@
 $(document).ready(() => {
-  console.log("Michiko Gomi")
+  console.log("JS connected to page")
   
   $('#facts-button').on('click', async () => {
+    console.log("Facts ETLing...")
     let data = await $.post('/facts')
     console.log(data)
   })
 
   $('#account-button').on('click', async () => {
+    console.log("Account ETLing...")
     let status = await $.post('/account')
     console.log(status)
   })
