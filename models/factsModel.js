@@ -7,7 +7,7 @@ exports.extractFacts = async () => {
   return result
 }
 
-exports.loadFacts = async () => {
+exports.loadFacts = async (data) => {
   let sql = ""
 
   let result = await mysql.dbDest.promise().query(sql)
