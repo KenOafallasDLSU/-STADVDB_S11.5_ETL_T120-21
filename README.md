@@ -1,4 +1,4 @@
-# -STADVDB_S11.5_ETL_T120-21
+# STADVDB_S11.5_ETL_T120-21
 STADVDB MCO2 ETL Tool Git Repository
 
 ## Build for local
